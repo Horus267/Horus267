@@ -1,10 +1,8 @@
 - 👋 Hi, I’m @Horus267
-- • Translator (Wordpress. Ethereum), designer, graphic designer, editor, developer in WP sites, site administrator in Crypto Ecosystem
 - 👀 I’m interested in next: Languages - json, js, html, css, python etc; Graphic format - svg
 - 🌱 I’m currently learning json, js, etc
-- 💞️ I’m looking to collaborate on ...
+- 💞️ I’m looking to collaborate on • Translator (Wordpress. Ethereum), designer, graphic designer, editor, developer in WP sites, site administrator in Crypto Ecosystem
 - 📫 How to reach me ...
-- *********************
 Ihor Kosovych
 kosovych267@gmail.com
 cryptohorus267@gmail.com
