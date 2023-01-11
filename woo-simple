@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Минимальное и максимальное количество товара WooCommerce
+ * Plugin Name: Адміністрування товарів в WooCommerce
  * Plugin URI: 
- * Description: Цей плагин спрощує адміністрування товаів в ВууКоммерс
+ * Description: Цей плагин спрощує адміністрування товарів в WooCommerce
  * Version: 1.0.0
  * Author: Ігор Косович
  * Author URI: https://github.com/Horus267
