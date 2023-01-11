@@ -1,0 +1,58 @@
+<?php
+/**
+ * Plugin Name: Минимальное и максимальное количество товара WooCommerce
+ * Plugin URI: 
+ * Description: Цей плагин спрощує адміністрування товаів в ВууКоммерс
+ * Version: 1.0.0
+ * Author: Ігор Косович
+ * Author URI: https://github.com/Horus267
+ * Developer: Ігор Косович
+ * Developer URI: 
+ * Text Domain: woocommerce-simple-tabs
+ * Domain Path: /languages
+ *
+ * Woo: 12345:342928dfsfhsf8477842374wdf4234sfd
+ * WC requires at least: 2.2
+ * WC tested up to: 7.2.3
+ *
+ * License: GNU General Public License v3.0
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ */
+ if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Виходимо з файла, якщо була спроба прямого доступу
+}
+/*
+ * Check if WooCommerce is active
+ */
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+
+    add_filter( 'product_type_selector', function ($types){
+        unset( $types['grouped'] );
+        unset( $types['external'] );
+        unset( $types['variable'] );
+
+        return $types;
+    } );
+
+
+    add_filter( 'product_type_options', '__return_empty_array' );
+
+
+    add_filter( 'woocommerce_product_data_tabs', function ($tabs ){
+        unset( $tabs ['shipping'] );
+        unset( $tabs ['linked_product'] );
+        //unset( $tabs ['attribute'] );
+        unset( $tabs ['variations'] );
+        unset( $tabs ['advanced'] );
+
+        return $tabs ;
+    } );
+
+
+    add_action( 'admin_menu', function (){
+        remove_submenu_page( 'edit.php?post_type=product', 'edit-tags.php?taxonomy=product_tag&amp;post_type=product' );
+        //remove_submenu_page( 'edit.php?post_type=product', 'product_attributes' );
+
+    }, 999 );
+    
+}
